@@ -175,7 +175,7 @@ typedef ConstSingleton<TracerNameValues> TracerNames;
 /**
  * Well-known stats sink names.
  * TODO(mattklein123): Move this to extensions directory when the migration is complete.
- * TODO(mattklein123): New filters should use the well known name: envoy.stat_sinks.name.
+ * TODO(mattklein123): New sinks should use the well known name: envoy.stat_sinks.name.
  */
 class StatsSinkNameValues {
 public:
@@ -190,9 +190,10 @@ public:
 typedef ConstSingleton<StatsSinkNameValues> StatsSinkNames;
 
 /**
- * Well-known access log names.
+ * Well-known access logger names.
  * TODO(mattklein123): Move this to extensions directory when the migration is complete.
- * TODO(mattklein123): New sinks should use the well known name: envoy.access_loggers.name.
+ * TODO(mattklein123): New access loggers should use the well known name:
+ * envoy.access_loggers.name.
  */
 class AccessLogNameValues {
 public:
@@ -311,6 +312,12 @@ private:
 
 typedef ConstSingleton<TagNameValues> TagNames;
 
+/**
+ * Well-known transport socket names.
+ * TODO(mattklein123): Move this to extensions directory when the migration is complete.
+ * TODO(mattklein123): New transport sockets should use the well known name:
+ * envoy.transport_sockets.name.
+ */
 class TransportSocketNameValues {
 public:
   const std::string RAW_BUFFER = "raw_buffer";
